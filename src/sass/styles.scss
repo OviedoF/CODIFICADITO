@@ -1,0 +1,251 @@
+body, html, div, main, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+
+}
+
+:root {
+    --background-color: #071A52;
+    --rectangle-color: #086972;
+    --border-color: #17B978;
+    --input-color: rgba(51, 53, 73, 0.5);
+    --text-color: #EFF6E0;  
+    --fine-color: #A7FF83;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+// HEADER //
+header {
+    background-color: var(--background-color);
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    p {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+       font-size: 2em;
+
+       p {
+           margin: 0;
+           margin-top: 10px;
+       }
+    }
+}
+
+// MAIN //
+
+main {
+    .rectangles {
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .input form, .result {
+            width: 580px;
+            height: 230px;
+            background-color: var(--rectangle-color);
+            border-top: 8px solid var(--border-color);
+            position: relative;
+            transition: all 0.5s;
+            box-shadow: -1px 10px 11px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: -1px 10px 11px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 10px 11px 0px rgba(0,0,0,0.75);
+            input{
+                width: 80%;
+                height: 60px;
+                position: relative;
+                top: 20%;
+                left: 8%;
+                background-color: var(--input-color);    
+                border: none;
+                color: var(--text-color);
+                padding-left: 15px;
+                font-size: 18px;
+                border: 1px solid var(--border-color);
+                border-radius: 5px;
+            }
+
+            .button-container, .buttonCopy-container {
+                button {
+                    margin-left: 49px;
+                    background-color: var(--border-color);
+                    border: none;
+                    border: 2px solid var(--background-color);
+                    border-radius: 5px;
+                    padding: 17px;
+                    color: var(--text-color);
+                    font-weight: 600;
+                    cursor: pointer;
+                    width: 150px;
+                }
+                position: relative;
+                top: 33%;
+            }
+
+            .buttonCopy-container {
+                margin-left: 30%;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+            }
+        }
+
+        .input form {
+            label {
+                font-size: 20px;
+                color: var(--text-color);
+                position: absolute;
+                top: 10px;
+                left: 22%;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    #result_text {
+        &:focus {
+            outline: none;
+        }
+        &::selection {
+            background-color: transparent;
+        }
+
+    }
+
+    .pop-up {
+        width: 254px;
+        height: 115px;
+        background-color: var(--rectangle-color);
+        border-radius: 50px;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        transition: all 1s;
+        left: 43%;
+
+        p {
+            margin: auto auto ;
+            font-size: 2em;
+        }
+    }
+
+
+@media only screen and (max-width: 600px) {
+   main {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       .rectangles {
+           width: 300px;
+
+        .result {
+            input {
+                height: 40px;
+            }
+            button {
+                margin-left: -18px !important;
+            }
+
+            height: 200px;
+        }
+       }
+   }
+
+   #form {
+       label {
+           font-size: 16px;
+           left: 10%;
+       }
+
+       
+       #input_text {
+            height: 40px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            button {
+                margin-left: 0;
+                width: 100px;
+                text-align: center;
+            }
+        }
+       width: 300px;
+       height: 200px;
+       margin-bottom: 20px;
+   }
+
+   .pop-up {
+       width: 150px;
+       height: 100px;
+       left: 30%;
+   }
+}
+
+// FOOTER //
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 10%;
+    font-size: 20px;
+    text-align: center;
+    transition: all 1s;
+
+
+    a {
+        color: var(--text-color);
+        transition: all 1s;
+
+        &:hover {
+            color: var(--border-color);
+            font-size: 23px;
+        }
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: -10px;
+        filter: invert(0.4) sepia(1) hue-rotate(20deg) saturate(1000%);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    footer {
+        font-size: 16px;
+        left: -30px;
+    }
+ }
+
+.incorrect {
+    outline: red !important;
+    border: 2px solid red !important;
+}

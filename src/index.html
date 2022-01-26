@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./imgs/1930272.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Questrial&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>CODIFICADITO</title>
+</head>
+<body>
+    
+    <div class="container" >
+        <header id="particles-js">
+            <p>codificadito</p>
+        </header>
+    
+        <main>
+            <div class="rectangles">
+                <div class="input">
+                    <form action="#" id="form">
+                        <label for="input_text" id="label_form">Sólo se permiten letras minúsculas.</label>
+                        <input type="text" id="input_text" placeholder="Ingrese su texto..." required="true" name="input_text">
+
+                        <div class="button-container">
+                            <button type="submit" id="codyButton">Codificar</button>
+                            <button type="submit" id="decodyButton">Decodificar</button>
+                        </div>
+                    </form>                 
+                </div>
+    
+                <div class="result">
+                    <input type="text" name="resultInput" id="result_text" value="" readonly='readonly'>
+                    <div class="buttonCopy-container">
+                        <button id="copyButton">Copiar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pop-up">
+                <p>Copiado!</p>
+            </div>
+        </main>
+    
+        <footer>
+            <a href="https://oviedof.github.io/portfolio/ " style="text-decoration: none;">Todos los derechos reservados: OvDev</a>
+            <img src="./imgs/image.png" alt="ovdev logo">
+        </footer>
+    </div>
+
+
+    <script src="./js/particles.js"></script>
+    <script src="./js/appParticles.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
