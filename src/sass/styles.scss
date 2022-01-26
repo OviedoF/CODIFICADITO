@@ -6,12 +6,22 @@ body, html, div, main, p {
 }
 
 :root {
-    --background-color: #071A52;
-    --rectangle-color: #086972;
-    --border-color: #17B978;
+    --background-color: #1b0044;
+    --rectangle-color: #9153f4;
+    --border-color: #d6c5f0;
     --input-color: rgba(51, 53, 73, 0.5);
     --text-color: #EFF6E0;  
     --fine-color: #A7FF83;
+}
+
+
+
+@mixin pinkColors {
+    --background-color: #200f21;
+    --rectangle-color: #5a3d5c;
+    --border-color: #f638dc;
+    --input-color: rgba(51, 53, 73, 0.5);
+    --text-color: #EFF6E0;  
 }
 
 body {
@@ -91,8 +101,10 @@ main {
                     border: 2px solid var(--background-color);
                     border-radius: 5px;
                     padding: 17px;
-                    color: var(--text-color);
-                    font-weight: 600;
+                    color: #5727a3;
+                    font-weight: 1000;
+                    letter-spacing: 2px;
+                    font-size: 15px;
                     cursor: pointer;
                     width: 150px;
                 }
@@ -192,8 +204,11 @@ main {
             justify-content: space-around;
             button {
                 margin-left: 0;
-                width: 100px;
+                width: 120px;
                 text-align: center;
+                padding-left: 10px;
+                letter-spacing: 1px;
+                font-size: 13px;
             }
         }
        width: 300px;
@@ -240,8 +255,13 @@ footer {
 
 @media only screen and (max-width: 600px) {
     footer {
-        font-size: 16px;
+        font-size: 12px;
         left: -30px;
+    }
+
+    .pop-up {
+        position: absolute;
+        bottom: 200px !important;
     }
  }
 

@@ -79,7 +79,7 @@ const aumentarLabel = (e) => {
 
 const validar = (e) => {
 
-    const exp = /[^a-z]/g;
+    const exp = /[^a-z\s!]/g;
 
     if(exp.test(e.target.value)) {
         e.target.classList.add('incorrect');
